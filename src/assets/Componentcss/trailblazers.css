@@ -1,0 +1,136 @@
+/* src/components/Trailblazers.css */
+
+.trailblazers {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #e8f5e9; /* Soft green for a welcoming feel */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #388e3c; /* Dark green for a vibrant look */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Simple, clean font for readability */
+}
+
+.trailblazer-gallery {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping to a new line */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 10px 0; /* Vertical padding for spacing */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    gap: 15px; /* Space between cards */
+}
+
+.trailblazer-card {
+    flex: 0 0 250px; /* Fixed width for each card */
+    border: 2px dashed #388e3c; /* Dashed border for excitement */
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for contrast */
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trailblazer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.trailblazer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for a soft look */
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #388e3c;
+    margin: 10px 0;
+}
+
+.quote {
+    font-style: italic; /* Distinguish quotes with italics */
+    color: #555; /* Slightly muted color for readability */
+}
+
+.social-media {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.social-media strong {
+    color: #388e3c; /* Highlight hashtag */
+}
+
+/* Additional styles for the scrollable container */
+.trailblazer-gallery::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+}
+
+.trailblazer-gallery::-webkit-scrollbar-thumb {
+    background: #388e3c; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.trailblazer-gallery::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Color of the scrollbar track */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .trailblazers {
+        margin: 20px; /* Reduce margin on smaller screens */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+    
+    h2 {
+        font-size: 2rem; /* Smaller heading on medium screens */
+    }
+    
+    .trailblazer-card {
+        flex: 0 0 200px; /* Adjust card width for smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    h2 {
+        font-size: 1.8rem; /* Smaller heading on smaller screens */
+    }
+    
+    .trailblazer-card {
+        flex: 0 0 150px; /* Further reduce card width */
+    }
+    
+    .quote {
+        font-size: 0.9rem; /* Smaller font size for quotes */
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5rem; /* Smaller heading on mobile devices */
+    }
+    
+    .trailblazer-card {
+        flex: 0 0 120px; /* Minimum card width */
+    }
+    
+    h3 {
+        font-size: 1.5rem; /* Smaller name font */
+    }
+    
+    .quote {
+        font-size: 0.8rem; /* Smaller font size for quotes */
+    }
+    
+    .social-media {
+        font-size: 1rem; /* Smaller font size for social media section */
+    }
+}

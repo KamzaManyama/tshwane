@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+.tourism-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 15px;
+  background: linear-gradient(to right, #1a5f7a, #2c8cb0);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1em;
+  padding: 0 10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 0 10px;
+}
+
+.nav-button {
+  flex: 1;
+  max-width: 200px;
+  padding: 12px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-button.active {
+  background-color: #1a5f7a;
+  color: white;
+}
+
+.attractions-grid, 
+.routes-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 10px;
+}
+
+.attraction-card,
+.route-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.card-image {
+  height: 180px;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #1a5f7a;
+}
+
+.description {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.details {
+  margin-bottom: 15px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 0.85em;
+}
+
+.learn-more {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background-color: #1a5f7a;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.learn-more:hover {
+  background-color: #2c8cb0;
+}
+
+.transport-section {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.routes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 10px; /* Padding inside the container */
+}
+
+.route-card {
+  background: white; /* White background for each card */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures children don't overflow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.2s ease; /* Smooth hover effect */
+  padding: 15px; /* Padding inside the card */
+}
+
+.route-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.route-card h3 {
+  font-size: 1.5em; /* Larger title */
+  color: #1a5f7a; /* Primary color for headings */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.route-details p {
+  margin: 5px 0; /* Space between details */
+  font-size: 0.9em; /* Slightly smaller text */
+}
+
+.route-details p strong {
+  color: #1a5f7a; /* Strong text in primary color */
+}
+
+.stops-list {
+  margin-top: 15px; /* Space above stops list */
+}
+
+.stops-list h4 {
+  font-size: 1.2em; /* Smaller header for stops */
+  margin-bottom: 5px; /* Space below the header */
+  color: #333; /* Darker text color */
+}
+
+.stops-list ul {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+}
+
+.stops-list li {
+  background-color: #e7f3f7; /* Light background for stops */
+  margin: 5px 0; /* Space between stops */
+  padding: 8px; /* Padding inside stops */
+  border-radius: 4px; /* Rounded corners for stops */
+  transition: background 0.2s ease; /* Smooth background change */
+}
+
+.stops-list li:hover {
+  background-color: #d1e7f5; /* Slightly darker on hover */
+}
+
+
+.footer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.8em;
+  color: #666;
+}

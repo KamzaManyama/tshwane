@@ -1,0 +1,250 @@
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 85.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Carousel Items */
+.carousel .list {
+    display: flex;
+    position: relative;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Ensure items take full width and height */
+.carousel .item {
+    min-width: 100%;
+    height: 100vh;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out; 
+    z-index: 0;
+}
+
+/* Overlay effect for images */
+.carousel .item::before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.666);
+    z-index: 1; 
+}
+
+.carousel .item.active {
+    display: flex; 
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Content inside Carousel */
+.content {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    right: 5%; 
+    color: #fff;
+    max-width: 600px;
+    z-index: 2;
+    margin-bottom: 10%;
+    
+}
+
+.content .title {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #14ff72cb; 
+}
+
+.content .des {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+/* Button Styles */
+.content .btn {
+    display: flex;
+    gap: 15px;
+}
+
+.content .btn button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #14ff72cb;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content .btn button:hover {
+    background-color: #14ff72cb;
+    color: #fff;
+}
+
+/* Arrows for Navigation */
+.arrows {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 2; 
+}
+
+.arrows button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(20, 255, 114, 0.9); 
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrows button:hover {
+    background-color: #fff;
+    color: #14ff72cb;
+}
+
+/* Animation for fading content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Time Running Bar */
+.carousel .timeRunning {
+    position: absolute;
+    z-index: 1000;
+    width: 0;
+    height: 4px;
+    background-color: #14ff72cb;
+    top: 0;
+    left: 0;
+    animation: runningTime 7s linear forwards;
+}
+
+@keyframes runningTime {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 999px) {
+    .content {
+        padding: 0 10px;
+    }
+
+    .content .title {
+        font-size: 36px;
+    }
+
+    .content .des {
+        font-size: 16px;
+    }
+
+    .arrows button {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .content {
+        padding: 0 10px; 
+    }
+
+    .content .title {
+        font-size: 30px;
+    }
+
+    .content .des {
+        font-size: 14px;
+    }
+
+    .content .btn  {
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-left: 15%;
+    }
+
+     
+    
+
+    .arrows button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile-specific tweaks */
+@media screen and (max-width: 480px) {
+    .content {
+        bottom: 25%;
+        left: 3%;
+        right: 3%; 
+        max-width: 100%;
+    }
+
+    .content .title {
+        font-size: 26px;
+    }
+
+    .content .des {
+        font-size: 13px;
+    }
+
+    .content .btn button {
+        font-size: 12px;
+        padding: 8px 12px;
+        
+    }
+
+    .arrows button {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}

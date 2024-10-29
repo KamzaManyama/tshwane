@@ -1,0 +1,130 @@
+/* Base styles for the bottom navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for better layout */
+    background-color: #ffffff;
+    border-top: 1px solid #dcdcdc;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px 0; /* Reduced padding for a tighter layout */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Individual navigation items */
+.nav-item {
+    flex: 1; /* Each item takes equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #888;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 8px 0; /* Adjusted padding for a more compact look */
+    position: relative;
+}
+
+/* Active state styling */
+.nav-item.active {
+    color: #2C5F2D;
+    transform: translateY(-2px);
+}
+
+/* Icon styling */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+    stroke-width: 2;
+}
+
+/* Active icon styling */
+.nav-item.active .nav-icon {
+    transform: scale(1.2);
+    stroke-width: 2.5;
+}
+
+/* Label styling */
+.nav-label {
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+/* Active label styling */
+.nav-item.active .nav-label {
+    opacity: 1;
+}
+
+/* Create button special styling */
+.nav-item[data-item="create"] {
+    margin-top: -24px; /* Adjusted margin for visual balance */
+    background: linear-gradient(to right, #2C5F2D, #235024);
+    padding: 12px; /* Adjusted padding */
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(44, 95, 45, 0.2);
+}
+
+.nav-item[data-item="create"] .nav-icon {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.nav-item[data-item="create"].active {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 6px 16px rgba(44, 95, 45, 0.3);
+}
+
+/* Active indicator line */
+.nav-item:not([data-item="create"]).active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #2C5F2D;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Hover states */
+.nav-item:hover:not(.active) {
+    color: #666;
+}
+
+.nav-item:hover:not(.active) .nav-icon {
+    transform: scale(1.1);
+}
+
+.nav-item:hover:not(.active) .nav-label {
+    opacity: 0.9;
+}
+
+/* Safe area spacing for iOS */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .bottom-nav {
+        padding-bottom: calc(8px + env(safe-area-inset-bottom)); /* Adjusted for consistency */
+    }
+}
+
+/* Animation keyframes for active state */
+@keyframes activeScale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
+}
+
+.nav-item.active .nav-icon {
+    animation: activeScale 0.3s ease forwards;
+}

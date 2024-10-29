@@ -1,0 +1,112 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/unionBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.666);
+    z-index: 1; 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-paragraph {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+}
+
+.get-started {
+    background-color: #007A33;
+    border: none;
+}
+
+.get-started:hover {
+    background-color: #005E26;
+    transform: translateY(-2px);
+}
+
+.learn-more {
+    background-color: transparent;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+}
+
+.learn-more:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .hero-header {
+        font-size: 2.5rem;
+    }
+
+    .hero-paragraph {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-header {
+        font-size: 2rem;
+    }
+
+    .hero-paragraph {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+    }
+}

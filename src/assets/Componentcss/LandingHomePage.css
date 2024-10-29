@@ -1,0 +1,403 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-bottom: 1px solid #dee2e6; /* Subtle border for separation */
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Add gap between badge and points */
+  }
+  
+  .badge {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* White background for visibility */
+    border-radius: 15px; /* Rounded corners */
+    padding: 8px 12px; /* Padding for a better look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .badge-text {
+    margin-left: 8px; /* Spacing between icon and text */
+    font-weight: 500; /* Slightly bolder text */
+  }
+  
+  .points-badge {
+    font-size: 14px; /* Adjust font size for points */
+    color: #ffc107; /* Color for points */
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Spacing between icons and select */
+  }
+  
+  .icon {
+    width: 24px; /* Increased size for better visibility */
+    height: 24px; /* Increased size for better visibility */
+    cursor: pointer; /* Pointer cursor for clickable icons */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .icon:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+  }
+  
+  .language-select {
+    padding: 8px 12px; /* Padding for better usability */
+    border: 1px solid #ced4da; /* Border color for select */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* White background for select */
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-header {
+      flex-direction: column; /* Stack items on smaller screens */
+      align-items: flex-start; /* Align items to the start */
+    }
+    
+    .header-left, .header-right {
+      width: 100%; /* Full width for better spacing */
+      justify-content: space-between; /* Distribute space evenly */
+    }
+  
+    .badge, .points-badge {
+      font-size: 12px; /* Smaller font size on mobile */
+    }
+  
+    .icon {
+      width: 20px; /* Slightly smaller icon size for mobile */
+      height: 20px; /* Slightly smaller icon size for mobile */
+    }
+  }
+  
+
+/* Icons styling */
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #4a90e2; /* Icon color */
+}
+
+/* Language select */
+.language-select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: linear-gradient(to right, #4a90e2, #9013fe);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.welcome-description {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.welcome-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.start-tour {
+    background-color: white;
+    color: #4a90e2;
+}
+
+.guide-map {
+    background: none;
+    border: 1px solid white;
+    color: white;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Featured Heritage Sites and Upcoming Events */
+.featured-sites, .upcoming-events {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.site-list, .event-list {
+    margin-top: 15px;
+}
+
+/* Site Cards */
+.site-card, .event-card {
+    display: flex;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+}
+
+.site-card:hover, .event-card:hover {
+    background-color: #eaeaea;
+}
+
+.site-image {
+    width: 100px;
+    height: 75px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.site-info {
+    flex: 1;
+}
+
+.site-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.site-description {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.site-details {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.site-rating, .site-distance {
+    margin-right: 10px;
+}
+
+.separator {
+    margin: 0 5px;
+    opacity: 0.7;
+}
+
+/* Event Styles */
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.event-name {
+    font-weight: bold;
+}
+
+.event-type {
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+
+.event-details {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    margin-top: 30px; /* Increased margin for better separation from other sections */
+    padding: 30px; /* Added padding for a spacious look */
+    background-color: #ffffff; /* Background color for better visibility */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.upcoming-events .section-title {
+    font-size: 24px; /* Larger title font */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 20px; /* Space below the title */
+    color: #333; /* Darker color for better contrast */
+}
+
+.event-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.event-card {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 15px; /* Padding for internal spacing */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for event cards */
+    margin-bottom: 15px; /* Space between event cards */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.event-card:hover {
+    background-color: #eaeaea; /* Change background on hover */
+}
+
+.event-header {
+    display: flex; /* Flexbox for header layout */
+    justify-content: space-between; /* Space between title and date */
+    align-items: center; /* Center align vertically */
+    margin-bottom: 10px; /* Space below header */
+}
+
+.event-name {
+    font-weight: bold; /* Bold for event name */
+    font-size: 18px; /* Larger font for event name */
+    color: #4a90e2; /* Main event name color */
+}
+
+.event-type {
+    background-color: #4a90e2; /* Event type background */
+    color: white; /* White text */
+    border-radius: 4px; /* Rounded corners */
+    padding: 4px 8px; /* Padding for event type */
+    font-size: 14px; /* Font size for event type */
+}
+
+.event-details {
+    font-size: 14px; /* Font size for details */
+    color: #666; /* Gray color for details */
+}
+
+/* Date and Time Styles */
+.event-date-time {
+    margin-top: 5px; /* Space above date/time */
+    font-size: 12px; /* Smaller font size */
+    color: #999; /* Light gray color */
+    text-align: right; /* Align to the right for a clean look */
+}
+
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+
+.quick-action-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.quick-action-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quick-action-card:last-child {
+    margin-right: 0; /* Remove margin for last card */
+}
+
+.quick-action-title {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.quick-action-desc {
+    color: #666;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .featured-sites, .upcoming-events {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-left, .header-right {
+        gap: 10px;
+    }
+
+    .welcome-section {
+        padding: 20px;
+    }
+
+    .welcome-title {
+        font-size: 24px;
+    }
+
+    .quick-actions {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20%;
+    }
+}

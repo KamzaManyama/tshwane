@@ -1,0 +1,148 @@
+
+  .profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .profile-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .avatar-container {
+    width: 80px;
+    height: 80px;
+    background-color: #e6f3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-info {
+    flex: 1;
+  }
+
+  .user-name {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+  }
+
+  .member-since {
+    color: #666;
+    margin: 5px 0 0 0;
+  }
+
+  .tabs {
+    margin-top: 20px;
+  }
+
+  .tab-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tab-button {
+    padding: 12px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .tab-button.active {
+    border-bottom-color: #2563eb;
+    color: #2563eb;
+  }
+
+  .tab-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: #444;
+  }
+
+  .bookings-section {
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+  }
+
+  .booking-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: background-color 0.3s ease;
+  }
+
+  .booking-card:hover {
+    background-color: #f8f9fa;
+  }
+
+  .booking-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .booking-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 6px;
+  }
+
+  .past-booking {
+    background-color: #f8f9fa;
+  }
+
+  @media (max-width: 768px) {
+    .profile-header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .info-item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .tab-buttons {
+      grid-template-columns: 1fr;
+    }
+
+    .profile-container {
+      margin-bottom: 15%;
+    }
+  }
